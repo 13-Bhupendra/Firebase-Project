@@ -22,9 +22,9 @@ const AllRoutes = () => {
         element={currentUser?.email ? <Home /> : <Navigate to="/" replace />}
       /> */}
 
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<SignUp />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/Signin" element={<SignIn />} />
+      <Route path="/signin" element={<SignIn />} />
     </Routes>
   );
 };
