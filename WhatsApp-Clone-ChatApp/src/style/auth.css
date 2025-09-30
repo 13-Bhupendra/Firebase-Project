@@ -1,0 +1,34 @@
+.mainContainer
+{
+    height: 100vh;
+    width: 100%;
+}
+.form-card {
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.signin-link {
+  color: #006400;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form-control {
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.btn-success {
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.extra-info {
+  background-color: transparent;
+}
+

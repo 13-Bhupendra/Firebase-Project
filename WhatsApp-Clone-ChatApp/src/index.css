@@ -1,1 +1,16 @@
+ *
+ {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: montserrat;
+ }
  
+body {
+  margin: 0;
+  background-color: #FCF5EB;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255, 0, 100, 0.1) 0, rgba(255, 0, 100, 0.1) 1px, transparent 1px, transparent 20px),
+    repeating-linear-gradient(-45deg, rgba(255, 0, 100, 0.1) 0, rgba(255, 0, 100, 0.1) 1px, transparent 1px, transparent 20px);
+  background-size: 40px 40px;
+}

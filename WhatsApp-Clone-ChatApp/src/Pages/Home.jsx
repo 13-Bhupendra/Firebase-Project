@@ -18,18 +18,11 @@ const Home = () => {
   } , [])
 
   console.log("users data : " , users  , "current user : " , currentUser)
-
-  // const handleSignOut = async ()=> {
-  //   await signOut(auth)
-  //   dispatch(clearCurrentUser())
-  //   navigate("/" , {replace : true});
-  // }
+  
 
   return (
     <div>
-        {/* <h1>Home page</h1>
-         <h1>Welcome {currentUser?.email}</h1>
-      <button onClick={handleSignOut}>Sign Out</button> */}
+
       <h2>Welcome {currentUser?.email || "Guest"}</h2>
       {
             users.map((e)=><h1>{e.email}</h1>)
