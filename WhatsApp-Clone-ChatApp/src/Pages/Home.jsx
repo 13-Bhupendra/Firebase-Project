@@ -4,29 +4,21 @@ import { useNavigate } from 'react-router-dom'
 import {auth} from "../../firebase"
 import { signOut } from 'firebase/auth'
 import {clearCurrentUser , fetchUserData} from '../Slices/usersSlices'
+import "../style/home.css"
+import Sidebar from '../Components/Sidebar'
+import UserCards from '../Components/UserCards'
 
 const Home = () => {
-  const dispatch = useDispatch()
-  const {currentUser , users} = useSelector((state)=> state.users)
-  const navigate = useNavigate()
 
-  const handleUsersData = ()=>{
-    dispatch(fetchUserData())
-  }
-  useEffect(()=>{
-    handleUsersData()
-  } , [])
-
-  console.log("users data : " , users  , "current user : " , currentUser)
-  
 
   return (
-    <div>
-
-      <h2>Welcome {currentUser?.email || "Guest"}</h2>
+    <div className='chatRoomMainContainer'>
+      <Sidebar />
+      <UserCards />
+      {/* <h2>Welcome {currentUser?.email || "Guest"}</h2>
       {
             users.map((e)=><h1>{e.email}</h1>)
-            }
+            } */}
     </div>
   )
 }

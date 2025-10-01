@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { FaLock } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { toast } from 'react-toastify';
 
 
 const SignInForm = () => {
@@ -19,13 +20,14 @@ const SignInForm = () => {
     const password = passwordRef.current.value
 
     dispatch(signInUser({ email, password }))
+    toast.success("Login Successful !")
+    navigate("/home"); 
   }
 
-  useEffect(() => {
-    if (currentUser?.email) {
-      navigate("/home", { replace: true }); 
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   if (currentUser?.email) {
+  //   }
+  // }, [navigate , currentUser]);
 
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center vh-100">

@@ -5,6 +5,7 @@ import { createAndAddNewChat } from '../Slices/chatRoomSlice'
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const SignUpForm = () => {
 
@@ -20,7 +21,10 @@ const SignUpForm = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = PasswordRef.current.value;
-        dispatch(addNewUsersData({name,email,password}))
+       dispatch(addNewUsersData({ name, email, password }))
+       toast.warning("SignUp Successful !")
+       navigate("/signin")
+      
     }
 
   return (

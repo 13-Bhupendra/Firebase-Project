@@ -1,12 +1,12 @@
 import React from 'react'
 import SignInForm from '../Components/SignInForm'
 import "../style/auth.css"
-import  Navbar  from '../Components/Navbar'
+import AuthNavbar from '../Components/AuthNavbar'
 
 const SignIn = () => {
   return (
-    <div>
-      <Navbar />
+    <div className='mainContainer'>
+      <AuthNavbar />
       <SignInForm />
     </div>
   )

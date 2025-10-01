@@ -1,13 +1,13 @@
 import React from 'react'
 import SignUpForm from '../Components/SignUpForm'
 import "../style/auth.css"
-import  Navbar  from '../Components/Navbar'
+import AuthNavbar from '../Components/AuthNavbar'
 
 
 const SignUp = () => {
   return (
     <div className='mainContainer'>
-      <Navbar />
+      <AuthNavbar />
       <SignUpForm />
     </div>
   )

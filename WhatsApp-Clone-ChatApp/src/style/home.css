@@ -1,0 +1,88 @@
+.chatRoomMainContainer
+{
+    height: 100vh;
+    width: 100%;
+    background-color: #F7F5F3;
+}
+
+/*!Side Bar */
+.sideBar {
+  height: 100vh;
+  width: 4%;
+  background-color: #F7F5F3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid darkgray;
+}
+
+.sideBar .nav-item {
+  font-size: 20px;
+  color: #4a4a4a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sideBar .nav-item:hover {
+  color: black; 
+}
+
+.sideBar .btn {
+  font-size: 24px;
+  color: black;
+  background: darkgray;
+  border: none;
+  border-radius: 50%;
+}
+
+
+/*!User Cards */
+.userCard
+{
+    height: 100vh;
+    width: 30%;
+    background-color: white;
+    position: fixed;
+    top: 0%;
+    left: 4%;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 1px solid darkgray;
+}
+.form-control 
+{
+  height: 40px;
+  outline: none;
+  background-color: #F7F5F3;
+}
+.category-btns
+{
+  width: fit-content;
+}
+
+
+
+/* Profile Card */
+.profile-card {
+  background-color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.profile-card:hover {
+  background-color: #e5f4ea;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-name {
+  font-weight: 500;
+  color: #111;
+}
+
+.profile-time {
+  font-size: 12px;
+}

@@ -93,7 +93,7 @@ export const deleteUsersData = createAsyncThunk(
 // !);
 
 const initialState = {
-  currentUser: null,
+  currentUser: {},
   users: [],
   isLoading: false,
   error: null,
