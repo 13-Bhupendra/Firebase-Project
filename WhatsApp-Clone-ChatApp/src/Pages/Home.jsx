@@ -5,8 +5,8 @@ import {auth} from "../../firebase"
 import { signOut } from 'firebase/auth'
 import {clearCurrentUser , fetchUserData} from '../Slices/usersSlices'
 import "../style/home.css"
-import Sidebar from '../Components/Sidebar'
 import UserCards from '../Components/UserCards'
+import Sidebar from '../Components/Sidebar'
 
 const Home = () => {
 
@@ -15,10 +15,6 @@ const Home = () => {
     <div className='chatRoomMainContainer'>
       <Sidebar />
       <UserCards />
-      {/* <h2>Welcome {currentUser?.email || "Guest"}</h2>
-      {
-            users.map((e)=><h1>{e.email}</h1>)
-            } */}
     </div>
   )
 }

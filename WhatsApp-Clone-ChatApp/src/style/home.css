@@ -26,14 +26,22 @@
 .sideBar .nav-item:hover {
   color: black; 
 }
-
-.sideBar .btn {
+.sidebar-icon {
   font-size: 24px;
-  color: black;
-  background: darkgray;
-  border: none;
-  border-radius: 50%;
+  transition: all 0.3s ease;
 }
+
+.inactive-link .sidebar-icon {
+  color: #4a4a4a;
+}
+.active-link {
+  background: darkgray;
+}
+.active-link .sidebar-icon {
+  color: black;
+}
+
+
 
 
 /*!User Cards */

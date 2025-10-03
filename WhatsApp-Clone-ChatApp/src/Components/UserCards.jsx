@@ -7,7 +7,7 @@ import DefaultScreen from './DefaultScreen';
 
 const UserCards = () => {
   const dispatch = useDispatch();
-  const { users, isLoading } = useSelector((state) => state.users);
+  const { users, isLoading , currentUser } = useSelector((state) => state.users);
 
   const [selectedUser, setSelectedUser] = useState(null);
 
@@ -19,11 +19,13 @@ const UserCards = () => {
     <div className='userCard d-flex flex-column p-3' style={{ height: '100vh' }}>
       <SearchBar />
 
-      <div className="profile-cards flex-grow-1 overflow-auto mt-3">
+      <div className="profile-cards flex-grow-1  mt-3">
         {isLoading ? (
           <div className="loader"></div>
         ) : (
-          users.map((e) => (
+          users
+          .filter((u)=> u.email !== currentUser?.email)
+          .map((e) => (
             <div key={e.uid}>
               <div
                 className="profile-card d-flex justify-content-between align-items-center rounded"

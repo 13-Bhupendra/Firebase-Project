@@ -21,13 +21,14 @@ const SignInForm = () => {
 
     dispatch(signInUser({ email, password }))
     toast.success("Login Successful !")
-    navigate("/home"); 
   }
 
-  // useEffect(() => {
-  //   if (currentUser?.email) {
-  //   }
-  // }, [navigate , currentUser]);
+  useEffect(() => {
+    if (currentUser?.email) {
+      toast.success("Login Successful !")
+      navigate("/home")
+    }
+  }, [currentUser, navigate])
 
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center vh-100">

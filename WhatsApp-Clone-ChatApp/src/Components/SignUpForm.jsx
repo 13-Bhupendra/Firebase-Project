@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addNewUsersData } from '../Slices/usersSlices'
-import { createAndAddNewChat } from '../Slices/chatRoomSlice'
+import { addNewUsersData, clearCurrentUser } from '../Slices/usersSlices'
+// import { createAndAddNewChat } from '../Slices/chatRoomSlice'
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
@@ -22,7 +22,8 @@ const SignUpForm = () => {
         const email = emailRef.current.value;
         const password = PasswordRef.current.value;
        dispatch(addNewUsersData({ name, email, password }))
-       toast.warning("SignUp Successful !")
+           dispatch(clearCurrentUser());
+       toast.warning("SignUp Successful! Please Sign In.")
        navigate("/signin")
       
     }

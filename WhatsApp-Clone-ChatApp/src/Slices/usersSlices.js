@@ -92,8 +92,10 @@ export const deleteUsersData = createAsyncThunk(
 //!   async () => {}
 // !);
 
+const savedUser = localStorage.getItem("currentUser");
+
 const initialState = {
-  currentUser: {},
+  currentUser:  savedUser ? JSON.parse(savedUser) : null,
   users: [],
   isLoading: false,
   error: null,
@@ -105,6 +107,7 @@ const userSlice = createSlice({
   reducers: {
     clearCurrentUser : (state)=>{
       state.currentUser = null
+      localStorage.removeItem("currentUser");
     }
   },
 
@@ -130,7 +133,7 @@ const userSlice = createSlice({
       })
       .addCase(addNewUsersData.fulfilled, (state, action) => {
         if (action.payload) {
-          state.currentUser = action.payload;
+          // state.currentUser = action.payload;
           state.users.push(action.payload);
         }
         state.isLoading = false;
@@ -163,6 +166,8 @@ const userSlice = createSlice({
         const user = action.payload
         state.currentUser =user
         state.isLoading = false;
+
+        localStorage.setItem("currentUser", JSON.stringify(user));
       })
       .addCase(signInUser.rejected, (state, action) => {
         state.error = action.error.message || "User not found!";
