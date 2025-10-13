@@ -1,2 +1,2 @@
-# Fire-base Project
+# Firebase Project
 
